@@ -5,16 +5,29 @@ $workflow = new Workflows();
 $home = $workflow->home();
 
 $query = $argv[1];
+
 $args = explode(" ",$query);
 $file_path = $args[0];
 $action = $args[1];
+
+$admin_actions = array(
+    'Directory' => 'Set the Director Folder where you work from',
+    'IDE'   => 'Set the IDE you work with'
+);
+
+if ($file_path === ">"){
+    foreach ($admin_actions as $admin=>$explanation){
+        $workflow->result($admin,$admin,$explanation,$admin);
+    }
+    echo $workflow->toxml();
+}
+
 
 $file_path = str_replace(" ","",$file_path);
 $file_path = str_replace($action,"",$file_path);
 
 $action = str_replace(" ","",$action);
 $action = str_replace($file_path,"",$action);
-
 
 
 if ($handle = opendir($home."/".$file_path)) {
