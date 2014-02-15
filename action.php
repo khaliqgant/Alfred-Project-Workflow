@@ -1,29 +1,18 @@
 <?php
 
-require_once('workflows.php');
-$workflow = new Workflows();
-$home = $workflow->home();
-$icon = 'web.png';
+$args = $argv[1];
+$args = explode(" ",$args);
+//add ability to specify other apps, like Sublime
 
-$query = $argv[1];
-
-
-if ($handle = opendir($home."/".$query)) {
-    while (false !== ($entry = readdir($handle))) {
-        if ($entry != "." && $entry != ".." && $entry !== ".DS_Store") {
-            //if ($handle = opendir($home."/".$query."/".$entry)){
-                //while (false !== ($content = readdir($handle))) {
-                    //if ($content != "." && $content != ".." && $content === "favicon.ico") {
-                        //$icon = $content;
-            //}
-            $workflow->result($entry,$entry,$entry,$entry,$icon);
-        }
-    }
-    closedir($handle);
+$file_path = $args[0];
+$action = $args[1];
+if ($action !== "*")
+{
+    $action = "/".$action;
+} else{
+    $action = " ".$action;
 }
+shell_exec("open -a Macvim $file_path$action");
 
 
-//echo $workflow->result;
-
-echo $workflow->toxml();
-
+?>

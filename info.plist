@@ -6,13 +6,21 @@
 	<string></string>
 	<key>connections</key>
 	<dict>
-		<key>46026FD0-1B9C-4722-B19F-B10ED8A040A2</key>
+		<key>AB4ACA17-8C51-4725-918F-80C7438F9B96</key>
 		<array/>
 		<key>E72BD65E-2AB8-44B7-90A7-52D2B702E781</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>46026FD0-1B9C-4722-B19F-B10ED8A040A2</string>
+				<string>AB4ACA17-8C51-4725-918F-80C7438F9B96</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -33,44 +41,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>output</key>
-				<integer>1</integer>
-				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>18F531D1-094B-4D9A-8381-62C2A83B45AE</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>36</integer>
-				<key>script</key>
-				<string>php -f action.php -- "{query}"</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>46026FD0-1B9C-4722-B19F-B10ED8A040A2</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
@@ -78,7 +48,7 @@
 				<key>keyword</key>
 				<string>project</string>
 				<key>script</key>
-				<string>php -f action.php -- "{query}"</string>
+				<string>php -f search.php -- "{query}"</string>
 				<key>title</key>
 				<string>project {query}</string>
 				<key>type</key>
@@ -94,23 +64,55 @@
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<false/>
+				<key>url</key>
+				<string>http://www.yahoo.com/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.largetype</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>31B5664C-4746-4979-980A-BD750FE7B4EC</string>
+			<string>B7FA280E-C3E6-470B-A525-B00A809031C6</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>php -f action.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>1BF5AFFD-4BF8-417F-AD44-88670917501A</string>
+			<string>AB4ACA17-8C51-4725-918F-80C7438F9B96</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>string="{query}"
+project=${string%% *}
+cd $project &amp;&amp; git status
+
+</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -119,30 +121,25 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>18F531D1-094B-4D9A-8381-62C2A83B45AE</key>
+		<key>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</key>
 		<dict>
 			<key>ypos</key>
-			<real>10</real>
+			<real>360</real>
 		</dict>
-		<key>1BF5AFFD-4BF8-417F-AD44-88670917501A</key>
+		<key>AB4ACA17-8C51-4725-918F-80C7438F9B96</key>
 		<dict>
 			<key>ypos</key>
 			<real>250</real>
 		</dict>
-		<key>31B5664C-4746-4979-980A-BD750FE7B4EC</key>
+		<key>B7FA280E-C3E6-470B-A525-B00A809031C6</key>
 		<dict>
 			<key>ypos</key>
 			<real>130</real>
-		</dict>
-		<key>46026FD0-1B9C-4722-B19F-B10ED8A040A2</key>
-		<dict>
-			<key>ypos</key>
-			<real>10</real>
 		</dict>
 		<key>E72BD65E-2AB8-44B7-90A7-52D2B702E781</key>
 		<dict>
 			<key>ypos</key>
-			<real>130</real>
+			<real>10</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
