@@ -3,7 +3,6 @@
 require_once('workflows.php');
 $workflow = new Workflows();
 $home = $workflow->home();
-$icon = 'web.png';
 
 $query = $argv[1];
 $args = explode(" ",$query);
@@ -19,15 +18,19 @@ $action = str_replace($file_path,"",$action);
 
 
 if ($handle = opendir($home."/".$file_path)) {
-    while (false !== ($file = readdir($handle))) {
-        if ($file != "." && $file != ".." && $file !== ".DS_Store") {
-            //if ($handle = opendir($home."/".$query."/".$file)){
-                //while (false !== ($content = readdir($handle))) {
-                    //if ($content != "." && $content != ".." && $content === "favicon.ico") {
-                        //$icon = $content;
-            //}
-            $path = $home."/".$file_path."/".$file." ".$action;
-            $workflow->result($file,$path,$file,$file,$icon);
+    while (false !== ($project= readdir($handle))) {
+        if ($project != "." && $project != ".." && $project !== ".DS_Store") {
+            $icon_possible_path = $home."/".$file_path."/".$project."/favicon.ico";
+            //use the favicon if one there
+            if (file_exists($icon_possible_path))
+            {
+                $icon = $icon_possible_path;
+            } else{
+                $icon = 'icon.png';
+            }
+
+            $path = $home."/".$file_path."/".$project." ".$action;
+            $workflow->result($project,$path,$project,$project,$icon);
         }
     }
     closedir($handle);

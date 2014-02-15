@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string></string>
+	<string>com.khaliqgant.openproject</string>
 	<key>connections</key>
 	<dict>
 		<key>AB4ACA17-8C51-4725-918F-80C7438F9B96</key>
@@ -31,38 +31,13 @@
 	<key>createdby</key>
 	<string>Khaliq Gant</string>
 	<key>description</key>
-	<string></string>
+	<string>Select through multiple local projects and open it in your IDE and terminal</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
 	<string>Open Project</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>36</integer>
-				<key>keyword</key>
-				<string>project</string>
-				<key>script</key>
-				<string>php -f search.php -- "{query}"</string>
-				<key>title</key>
-				<string>project {query}</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>E72BD65E-2AB8-44B7-90A7-52D2B702E781</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -77,6 +52,31 @@
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>B7FA280E-C3E6-470B-A525-B00A809031C6</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>proj</string>
+				<key>script</key>
+				<string>php -f search.php -- "{query}"</string>
+				<key>title</key>
+				<string>Open Project {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E72BD65E-2AB8-44B7-90A7-52D2B702E781</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -124,17 +124,17 @@ cd $project &amp;&amp; git status
 		<key>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</key>
 		<dict>
 			<key>ypos</key>
-			<real>360</real>
+			<real>240</real>
 		</dict>
 		<key>AB4ACA17-8C51-4725-918F-80C7438F9B96</key>
 		<dict>
 			<key>ypos</key>
-			<real>250</real>
+			<real>120</real>
 		</dict>
 		<key>B7FA280E-C3E6-470B-A525-B00A809031C6</key>
 		<dict>
 			<key>ypos</key>
-			<real>130</real>
+			<real>10</real>
 		</dict>
 		<key>E72BD65E-2AB8-44B7-90A7-52D2B702E781</key>
 		<dict>
@@ -143,6 +143,6 @@ cd $project &amp;&amp; git status
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/khaliqgant/Alfred-Project-Workflow</string>
 </dict>
 </plist>
