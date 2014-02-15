@@ -10,16 +10,11 @@ $args = explode(" ",$query);
 $file_path = $args[0];
 $action = $args[1];
 
-$admin_actions = array(
-    'Directory' => array('explanation' => 'Set the Director Folder where you work from',
-                    'icon' => 'assets/directory.png'
-                ),
-    'IDE'       => array('explanation' => 'Set the IDE you work with',
-                    'icon' => 'assets/ide.png'
-                )
-);
 
 if ($file_path === ">"){
+    //set the possible admin actions
+    $admin_actions = admin();
+
     foreach ($admin_actions as $admin=>$info){
         $explanation = $info['explanation'];
         $icon = $info['icon'];
@@ -27,6 +22,8 @@ if ($file_path === ">"){
     }
     echo $workflow->toxml();
 }
+
+
 
 
 $file_path = str_replace(" ","",$file_path);
@@ -58,3 +55,14 @@ if ($handle = opendir($home."/".$file_path)) {
 
 echo $workflow->toxml();
 
+
+function admin(){
+    return array(
+        'Directory' => array('explanation' => 'Set the Director Folder where you work from',
+                        'icon' => 'assets/directory.png'
+                    ),
+        'IDE'       => array('explanation' => 'Set the IDE you work with',
+                        'icon' => 'assets/ide.png'
+                    )
+    );
+}
