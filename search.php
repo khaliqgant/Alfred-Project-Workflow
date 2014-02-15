@@ -11,13 +11,19 @@ $file_path = $args[0];
 $action = $args[1];
 
 $admin_actions = array(
-    'Directory' => 'Set the Director Folder where you work from',
-    'IDE'   => 'Set the IDE you work with'
+    'Directory' => array('explanation' => 'Set the Director Folder where you work from',
+                    'icon' => 'icon.png'
+                ),
+    'IDE'       => array('explanation' => 'Set the IDE you work with',
+                    'icon' => 'icon.png'
+                )
 );
 
 if ($file_path === ">"){
-    foreach ($admin_actions as $admin=>$explanation){
-        $workflow->result($admin,$admin,$explanation,$admin);
+    foreach ($admin_actions as $admin=>$info){
+        $explanation = $info['explanation'];
+        $icon = $info['icon'];
+        $workflow->result($admin,$admin,$explanation,$admin,$icon);
     }
     echo $workflow->toxml();
 }
