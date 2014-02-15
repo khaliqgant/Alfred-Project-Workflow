@@ -24,7 +24,6 @@ if ($file_path === ">"){
 }
 
 
-
 $file_path = arg_cleanup($file_path,$action);
 $action = arg_cleanup($action,$file_path);
 
@@ -58,10 +57,10 @@ echo $workflow->toxml();
 function admin(){
     return array(
         'Directory' => array('explanation' => 'Set the Director Folder where you work from',
-                        'icon' => 'assets/directory.png'
+                             'icon' => 'assets/directory.png'
                     ),
         'IDE'       => array('explanation' => 'Set the IDE you work with',
-                        'icon' => 'assets/ide.png'
+                             'icon' => 'assets/ide.png'
                     )
     );
 }
