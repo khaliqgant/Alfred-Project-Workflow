@@ -65,7 +65,7 @@
 				<key>keyword</key>
 				<string>proj</string>
 				<key>script</key>
-				<string>php -f search.php -- "{query}"</string>
+				<string>php -f scripts/search.php -- "{query}"</string>
 				<key>title</key>
 				<string>Open Project {query}</string>
 				<key>type</key>
@@ -86,7 +86,7 @@
 				<key>escaping</key>
 				<integer>4</integer>
 				<key>script</key>
-				<string>php -f action.php -- "{query}"</string>
+				<string>php -f scripts/action.php -- "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
