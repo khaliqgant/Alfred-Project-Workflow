@@ -6,7 +6,7 @@ $args = explode(" ",$args);
 
 $file_path = $args[0];
 $action = $args[1];
-if ($action !== "*")
+if ($action !== "*" || $action !== ".")
 {
     $action = "/".$action;
 } else{
