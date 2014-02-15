@@ -12,10 +12,10 @@ $action = $args[1];
 
 $admin_actions = array(
     'Directory' => array('explanation' => 'Set the Director Folder where you work from',
-                    'icon' => 'icon.png'
+                    'icon' => 'assets/directory.png'
                 ),
     'IDE'       => array('explanation' => 'Set the IDE you work with',
-                    'icon' => 'icon.png'
+                    'icon' => 'assets/ide.png'
                 )
 );
 
@@ -45,7 +45,7 @@ if ($handle = opendir($home."/".$file_path)) {
             {
                 $icon = $icon_possible_path;
             } else{
-                $icon = 'icon.png';
+                $icon = 'assets/icon.png';
             }
 
             $path = $home."/".$file_path."/".$project." ".$action;
