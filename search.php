@@ -25,13 +25,8 @@ if ($file_path === ">"){
 
 
 
-
-$file_path = str_replace(" ","",$file_path);
-$file_path = str_replace($action,"",$file_path);
-
-$action = str_replace(" ","",$action);
-$action = str_replace($file_path,"",$action);
-
+$file_path = arg_cleanup($file_path,$action);
+$action = arg_cleanup($action,$file_path);
 
 if ($handle = opendir($home."/".$file_path)) {
     while (false !== ($project= readdir($handle))) {
@@ -56,6 +51,10 @@ if ($handle = opendir($home."/".$file_path)) {
 echo $workflow->toxml();
 
 
+/**
+ * Sends admin actions
+ * @return array
+ */
 function admin(){
     return array(
         'Directory' => array('explanation' => 'Set the Director Folder where you work from',
@@ -65,4 +64,17 @@ function admin(){
                         'icon' => 'assets/ide.png'
                     )
     );
+}
+
+/**
+ * Strip spaces and remove other argument from the string
+ * @param $arg1 - what you actually want
+ * @param $arg2 - what you want to strip away
+ * @return string
+ */
+function arg_cleanup($arg1,$arg2){
+    $arg = str_replace(" ","",$arg1);
+    $arg = str_replace($arg2,"",$arg1);
+
+    return $arg;
 }
