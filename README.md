@@ -16,7 +16,7 @@ new one up. I also love [Alfred](http://www.alfredapp.com/) and so set out to ma
 * It will then launch that project in your IDE and cd to that project in the terminal and run a git status for you
 
 ## Issues/Notes
-* Right now the IDE is just set to Macvim. I am working on allowing for a configuration set to allow for different IDEs like so:
+* Right now the IDE is just set to Macvim and the Directory is set manually. For the next release I plan on allowing for a configuration set to allow for different IDEs like so:
 ![Screenshot of config options](http://imgur.com/5lICGTc.png)
 
 Heavily influnced by [gharlan / alfred-github-workflow](https://github.com/gharlan/alfred-github-workflow)
