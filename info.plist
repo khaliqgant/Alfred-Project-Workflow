@@ -8,6 +8,8 @@
 	<dict>
 		<key>AB4ACA17-8C51-4725-918F-80C7438F9B96</key>
 		<array/>
+		<key>CAC91D3F-5DDF-4682-A96F-79F586ED0FCB</key>
+		<array/>
 		<key>E72BD65E-2AB8-44B7-90A7-52D2B702E781</key>
 		<array>
 			<dict>
@@ -58,6 +60,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>php -f scripts/action.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AB4ACA17-8C51-4725-918F-80C7438F9B96</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -86,33 +105,44 @@
 				<key>escaping</key>
 				<integer>4</integer>
 				<key>script</key>
-				<string>php -f scripts/action.php -- "{query}"</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>AB4ACA17-8C51-4725-918F-80C7438F9B96</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>4</integer>
-				<key>script</key>
 				<string>string="{query}"
-project=${string%% *}
-cd $project &amp;&amp; git status
-
+if [ $string = "IDE" ];then
+	sl -e
+else
+	project=${string%% *}
+	cd $project &amp;&amp; git status
+fi
 </string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.terminalcommand</string>
 			<key>uid</key>
 			<string>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>proj set</string>
+				<key>script</key>
+				<string>php -f scripts/admin.php -- "{query}"</string>
+				<key>title</key>
+				<string>Set Options</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>CAC91D3F-5DDF-4682-A96F-79F586ED0FCB</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -136,10 +166,15 @@ cd $project &amp;&amp; git status
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
+		<key>CAC91D3F-5DDF-4682-A96F-79F586ED0FCB</key>
+		<dict>
+			<key>ypos</key>
+			<real>400</real>
+		</dict>
 		<key>E72BD65E-2AB8-44B7-90A7-52D2B702E781</key>
 		<dict>
 			<key>ypos</key>
-			<real>10</real>
+			<real>120</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>

@@ -10,20 +10,6 @@ $args = explode(" ",$query);
 $file_path = $args[0];
 $action = $args[1];
 
-
-if ($file_path === ">"){
-    //set the possible admin actions
-    $admin_actions = admin();
-
-    foreach ($admin_actions as $admin=>$info){
-        $explanation = $info['explanation'];
-        $icon = $info['icon'];
-        $workflow->result($admin,$admin,$explanation,$admin,$icon);
-    }
-    echo $workflow->toxml();
-}
-
-
 $file_path = arg_cleanup($file_path,$action);
 $action = arg_cleanup($action,$file_path);
 
@@ -36,7 +22,7 @@ if ($handle = opendir($home."/".$file_path)) {
             {
                 $icon = $icon_possible_path;
             } else{
-                $icon = 'assets/icon.png';
+                $icon = 'icon.png';
             }
 
             $path = $home."/".$file_path."/".$project." ".$action;
@@ -48,22 +34,6 @@ if ($handle = opendir($home."/".$file_path)) {
 
 
 echo $workflow->toxml();
-
-
-/**
- * Sends admin actions
- * @return array
- */
-function admin(){
-    return array(
-        'Directory' => array('explanation' => 'Set the Director Folder where you work from',
-                             'icon' => 'assets/directory.png'
-                    ),
-        'IDE'       => array('explanation' => 'Set the IDE you work with',
-                             'icon' => 'assets/ide.png'
-                    )
-    );
-}
 
 /**
  * Strip spaces and remove other argument from the string
