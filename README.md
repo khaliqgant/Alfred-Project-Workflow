@@ -15,9 +15,11 @@ new one up. I also love [Alfred](http://www.alfredapp.com/) and so set out to ma
 * Scroll down to select a project to launch
 * It will then launch that project in your IDE and cd to that project in the terminal and run a git status for you
 
-## Issues/Notes
-* Right now the IDE is just set to Macvim and the Directory is set manually. For the next release I plan on allowing for a configuration set to allow for different IDEs like so:
-![Screenshot of config options](http://imgur.com/5lICGTc.png)
+## Config Options
+* Set your IDE or working directory by writing ````pro set```` and the top options will drop down:
+![Screenshot of config options](http://i.imgur.com/q5D42cY.png)
+* Right now the only two IDEs that I know that will work are Sublime & Macvim. If you are using Sublime you should have set a symlink so as seen (here)[https://gist.github.com/artero/1236170] so the shortcut will be "subl"
+* The IDE should by typed in "Macvim" or "Sublime"
 
 Heavily influnced by [gharlan / alfred-github-workflow](https://github.com/gharlan/alfred-github-workflow)
 

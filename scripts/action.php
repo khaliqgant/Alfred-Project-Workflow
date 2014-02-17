@@ -15,7 +15,15 @@ if ($action !== "*" || $action !== ".")
 } else{
     $action = " ".$action;
 }
-shell_exec("open -a $ide $file_path$action");
+switch ($ide)
+{
+    case "Sublime":
+        shell_exec("subl $file_path $action");
+        break;
+    case "Macvim":
+        shell_exec("open -a $ide $file_path $action");
+    break;
+}
 
 
 ?>

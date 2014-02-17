@@ -5,11 +5,16 @@ $workflow = new Workflows();
 $home = $workflow->home();
 
 $action = $argv[1];
+$options = explode(" ",$action);
+
+$admin = $options[0];
+$set = $options[1];
+$admin = arg_cleanup($admin,$set);
 
 //get their working directory
 $dir = $workflow->get('Directory','settings.plist');
 
-if ($action !== "set")
+if ($action !== "set" && $admin !== "set")
 {
     if ($handle = opendir($home."/".$dir)) {
         while (false !== ($project= readdir($handle))) {
@@ -30,7 +35,7 @@ if ($action !== "set")
         closedir($handle);
 }
 
-echo $workflow->toxml();
+    echo $workflow->toxml();
 
 }
 
