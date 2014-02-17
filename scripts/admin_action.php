@@ -8,6 +8,6 @@ $admin = explode(" ",$admin);
 $set = $admin[0];
 $response = $admin[1];
 
-$workflow->set($set,$response,'settings.plist');
+$workflow->set($set,$response,'settings/settings.plist');
 
 ?>

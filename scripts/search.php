@@ -12,7 +12,7 @@ $set = $options[1];
 $admin = arg_cleanup($admin,$set);
 
 //get their working directory
-$dir = $workflow->get('Directory','settings.plist');
+$dir = $workflow->get('Directory','settings/settings.plist');
 
 if ($action !== "set" && $admin !== "set")
 {

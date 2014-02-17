@@ -5,7 +5,7 @@ $workflow = new Workflows();
 
 $args = $argv[1];
 $args = explode(" ",$args);
-$ide = $workflow->get('IDE','settings.plist');
+$ide = $workflow->get('IDE','settings/settings.plist');
 
 $file_path = $args[0];
 $action = $args[1];
