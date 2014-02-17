@@ -18,7 +18,7 @@ new one up. I also love [Alfred](http://www.alfredapp.com/) and so set out to ma
 * Initiate with ````proj````
 * Shows you which projects are located in the directory that you specified
 ![Screenshot of project prompt](http://imgur.com/tqqqrWI.png)
-* You can optionally set what part of the project you want to launch. For example ````proj Sites assets```` will then launch in your IDE the assets folder. You could also use "*" or "."
+* You can optionally set what part of the project you want to launch. For example ````proj Sites assets```` will then launch in your IDE the assets folder. You could also use ````*```` or ````.````
 * Scroll down to select a project to launch
 * It will then launch that project in your IDE and cd to that project in the terminal and run a git status for you
 
