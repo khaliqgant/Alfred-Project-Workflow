@@ -9,27 +9,30 @@ $action = $argv[1];
 //get their working directory
 $dir = $workflow->get('Directory','settings.plist');
 
-if ($handle = opendir($home."/".$dir)) {
-    while (false !== ($project= readdir($handle))) {
-        if ($project != "." && $project != ".." && $project !== ".DS_Store") {
-            $icon_possible_path = $home."/".$dir."/".$project."/favicon.ico";
-            //use the favicon if one there
-            if (file_exists($icon_possible_path))
-            {
-                $icon = $icon_possible_path;
-            } else{
-                $icon = 'icon.png';
-            }
+if ($action !== "set")
+{
+    if ($handle = opendir($home."/".$dir)) {
+        while (false !== ($project= readdir($handle))) {
+            if ($project != "." && $project != ".." && $project !== ".DS_Store") {
+                $icon_possible_path = $home."/".$dir."/".$project."/favicon.ico";
+                //use the favicon if one there
+                if (file_exists($icon_possible_path))
+                {
+                    $icon = $icon_possible_path;
+                } else{
+                    $icon = 'icon.png';
+                }
 
-            $path = $home."/".$dir."/".$project." ".$action;
-            $workflow->result($project,$path,$project,$project,$icon);
+                $path = $home."/".$dir."/".$project." ".$action;
+                $workflow->result($project,$path,$project,$project,$icon);
+            }
         }
-    }
-    closedir($handle);
+        closedir($handle);
 }
 
-
 echo $workflow->toxml();
+
+}
 
 /**
  * Strip spaces and remove other argument from the string
