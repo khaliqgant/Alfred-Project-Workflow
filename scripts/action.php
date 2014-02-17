@@ -18,7 +18,7 @@ if ($action !== "*" || $action !== ".")
 switch ($ide)
 {
     case "Sublime":
-        shell_exec("subl $file_path $action");
+        shell_exec("subl $file_path/$action");
         break;
     case "Macvim":
         shell_exec("open -a $ide $file_path$action");
