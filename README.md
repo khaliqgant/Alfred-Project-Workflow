@@ -18,7 +18,7 @@ new one up. I also love [Alfred](http://www.alfredapp.com/) and so set out to ma
 ## Config Options
 * Set your IDE or working directory by writing ````pro set```` and the top options will drop down:
 ![Screenshot of config options](http://i.imgur.com/q5D42cY.png)
-* Right now the only two IDEs that I know that will work are Sublime & Macvim. If you are using Sublime you should have set a symlink so as seen (here)[https://gist.github.com/artero/1236170] so the shortcut will be "subl"
+* Right now the only two IDEs that I know that will work are Sublime & Macvim. If you are using Sublime you should have set a symlink so as seen [here](http://www.sublimetext.com/docs/2/osx_command_line.html) so the shortcut will be "subl"
 * The IDE should by typed in "Macvim" or "Sublime"
 
 Heavily influnced by [gharlan / alfred-github-workflow](https://github.com/gharlan/alfred-github-workflow)
