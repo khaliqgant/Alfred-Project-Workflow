@@ -6,10 +6,21 @@
 	<string>com.khaliqgant.openproject</string>
 	<key>connections</key>
 	<dict>
+		<key>A33EA67D-3602-4FD5-AB14-9E5C5A75E10D</key>
+		<array/>
 		<key>AB4ACA17-8C51-4725-918F-80C7438F9B96</key>
 		<array/>
 		<key>CAC91D3F-5DDF-4682-A96F-79F586ED0FCB</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A33EA67D-3602-4FD5-AB14-9E5C5A75E10D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>E72BD65E-2AB8-44B7-90A7-52D2B702E781</key>
 		<array>
 			<dict>
@@ -23,6 +34,14 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>932A68CE-C032-43C8-A2A9-807AE5DE3BC7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -106,12 +125,8 @@
 				<integer>4</integer>
 				<key>script</key>
 				<string>string="{query}"
-if [ $string = "IDE" ];then
-	sl -e
-else
-	project=${string%% *}
-	cd $project &amp;&amp; git status
-fi
+project=${string%% *}
+cd $project &amp;&amp; git status
 </string>
 			</dict>
 			<key>type</key>
@@ -146,6 +161,31 @@ fi
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>script</key>
+				<string>php -f scripts/admin_action.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A33EA67D-3602-4FD5-AB14-9E5C5A75E10D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>932A68CE-C032-43C8-A2A9-807AE5DE3BC7</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -155,6 +195,16 @@ fi
 		<dict>
 			<key>ypos</key>
 			<real>240</real>
+		</dict>
+		<key>932A68CE-C032-43C8-A2A9-807AE5DE3BC7</key>
+		<dict>
+			<key>ypos</key>
+			<real>400</real>
+		</dict>
+		<key>A33EA67D-3602-4FD5-AB14-9E5C5A75E10D</key>
+		<dict>
+			<key>ypos</key>
+			<real>400</real>
 		</dict>
 		<key>AB4ACA17-8C51-4725-918F-80C7438F9B96</key>
 		<dict>

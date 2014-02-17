@@ -1,26 +1,21 @@
 <?php
 
+require_once('workflows.php');
+$workflow = new Workflows();
+
 $args = $argv[1];
 $args = explode(" ",$args);
-//add ability to specify other apps, like Sublime
+$ide = $workflow->get('IDE','settings.plist');
 
-if ($args[0] === "<")
+$file_path = $args[0];
+$action = $args[1];
+if ($action !== "*" || $action !== ".")
 {
-    $admin = $args[1];
-    //http://dferg.us/workflows-class/
-    echo $admin;
-    exit();
+    $action = "/".$action;
 } else{
-    $file_path = $args[0];
-    $action = $args[1];
-    if ($action !== "*" || $action !== ".")
-    {
-        $action = "/".$action;
-    } else{
-        $action = " ".$action;
-    }
-    shell_exec("open -a Macvim $file_path$action");
+    $action = " ".$action;
 }
+shell_exec("open -a $ide $file_path$action");
 
 
 ?>

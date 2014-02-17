@@ -3,13 +3,17 @@
 require_once('workflows.php');
 $workflow = new Workflows();
 
+$query = $argv[1];
+$args = explode(" ",$query);
+$response = $args[0];
+
 //set the possible admin actions
 $admin_actions = admin();
 
 foreach ($admin_actions as $admin=>$info){
     $explanation = $info['explanation'];
     $icon = $info['icon'];
-    $workflow->result($admin,$admin,$explanation,$admin,$icon);
+    $workflow->result($admin,$admin." ".$response,$explanation,$admin,$icon);
 }
 echo $workflow->toxml();
 
