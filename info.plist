@@ -39,14 +39,6 @@
 				<key>modifiersubtext</key>
 				<string></string>
 			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>932A68CE-C032-43C8-A2A9-807AE5DE3BC7</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -178,14 +170,6 @@ cd $project &amp;&amp; git status
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.output.largetype</string>
-			<key>uid</key>
-			<string>932A68CE-C032-43C8-A2A9-807AE5DE3BC7</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -195,11 +179,6 @@ cd $project &amp;&amp; git status
 		<dict>
 			<key>ypos</key>
 			<real>240</real>
-		</dict>
-		<key>932A68CE-C032-43C8-A2A9-807AE5DE3BC7</key>
-		<dict>
-			<key>ypos</key>
-			<real>400</real>
 		</dict>
 		<key>A33EA67D-3602-4FD5-AB14-9E5C5A75E10D</key>
 		<dict>
