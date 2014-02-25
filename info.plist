@@ -10,6 +10,8 @@
 		<array/>
 		<key>AB4ACA17-8C51-4725-918F-80C7438F9B96</key>
 		<array/>
+		<key>C1054B4D-1D51-4B7B-812F-3C50227AD62A</key>
+		<array/>
 		<key>CAC91D3F-5DDF-4682-A96F-79F586ED0FCB</key>
 		<array>
 			<dict>
@@ -25,7 +27,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>AB4ACA17-8C51-4725-918F-80C7438F9B96</string>
+				<string>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -33,7 +35,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</string>
+				<string>AB4ACA17-8C51-4725-918F-80C7438F9B96</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -54,34 +56,17 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>plusspaces</key>
-				<false/>
-				<key>url</key>
-				<string>http://www.yahoo.com/{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>B7FA280E-C3E6-470B-A525-B00A809031C6</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>escaping</key>
-				<integer>4</integer>
+				<integer>36</integer>
 				<key>script</key>
-				<string>php -f scripts/action.php -- "{query}"</string>
+				<string>php -f scripts/mamp_action.php -- "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>AB4ACA17-8C51-4725-918F-80C7438F9B96</string>
+			<string>C1054B4D-1D51-4B7B-812F-3C50227AD62A</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -118,13 +103,29 @@
 				<key>script</key>
 				<string>string="{query}"
 project=${string%% *}
-cd $project &amp;&amp; git status
-</string>
+cd $project &amp;&amp; git status</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.terminalcommand</string>
 			<key>uid</key>
 			<string>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>php -f scripts/action.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AB4ACA17-8C51-4725-918F-80C7438F9B96</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -178,7 +179,7 @@ cd $project &amp;&amp; git status
 		<key>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</key>
 		<dict>
 			<key>ypos</key>
-			<real>240</real>
+			<real>120</real>
 		</dict>
 		<key>A33EA67D-3602-4FD5-AB14-9E5C5A75E10D</key>
 		<dict>
@@ -188,9 +189,9 @@ cd $project &amp;&amp; git status
 		<key>AB4ACA17-8C51-4725-918F-80C7438F9B96</key>
 		<dict>
 			<key>ypos</key>
-			<real>120</real>
+			<real>230</real>
 		</dict>
-		<key>B7FA280E-C3E6-470B-A525-B00A809031C6</key>
+		<key>C1054B4D-1D51-4B7B-812F-3C50227AD62A</key>
 		<dict>
 			<key>ypos</key>
 			<real>10</real>
