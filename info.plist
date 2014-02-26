@@ -111,7 +111,7 @@
 				<key>script</key>
 				<string>string="{query}"
 project=${string%% *}
-cd $project &amp;&amp; git status</string>
+cd $project &amp;&amp; git status &amp;&amp; github .</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.terminalcommand</string>
