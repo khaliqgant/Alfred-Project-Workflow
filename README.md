@@ -20,7 +20,8 @@ new one up. I also love [Alfred](http://www.alfredapp.com/) and so set out to ma
 ![Screenshot of project prompt](http://imgur.com/tqqqrWI.png)
 * You can optionally set what part of the project you want to launch. For example ````proj Sites assets```` will then launch in your IDE the assets folder. You could also use ````*```` or ````.````
 * Scroll down to select a project to launch
-* It will then launch that project in your IDE and cd to that project in the terminal and run a git status for you
+* It will then launch that project in your IDE and cd to that project in the terminal, run a git status for you, and open the Github app for that repository. Note: Install "Command Lines Tools" on the Github app if you want this to work.
+* If you use MAMP it will also look up the domain of the project and open it in the browser
 
 
 Heavily influnced by [gharlan / alfred-github-workflow](https://github.com/gharlan/alfred-github-workflow)
