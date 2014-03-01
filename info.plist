@@ -11,7 +11,24 @@
 		<key>AB4ACA17-8C51-4725-918F-80C7438F9B96</key>
 		<array/>
 		<key>C1054B4D-1D51-4B7B-812F-3C50227AD62A</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0308B73A-4904-49ED-A8B5-9E40AD1E0C7D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>103F9363-EE67-4F2E-8CD9-C40F7C18C010</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>CAC91D3F-5DDF-4682-A96F-79F586ED0FCB</key>
 		<array>
 			<dict>
@@ -28,22 +45,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>C1054B4D-1D51-4B7B-812F-3C50227AD62A</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>AB4ACA17-8C51-4725-918F-80C7438F9B96</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -75,6 +76,14 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>C1054B4D-1D51-4B7B-812F-3C50227AD62A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>0308B73A-4904-49ED-A8B5-9E40AD1E0C7D</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -117,6 +126,19 @@ cd $project &amp;&amp; git status &amp;&amp; github .</string>
 			<string>alfred.workflow.action.terminalcommand</string>
 			<key>uid</key>
 			<string>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>103F9363-EE67-4F2E-8CD9-C40F7C18C010</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -184,6 +206,16 @@ cd $project &amp;&amp; git status &amp;&amp; github .</string>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>0308B73A-4904-49ED-A8B5-9E40AD1E0C7D</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>103F9363-EE67-4F2E-8CD9-C40F7C18C010</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
 		<key>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</key>
 		<dict>
 			<key>ypos</key>
