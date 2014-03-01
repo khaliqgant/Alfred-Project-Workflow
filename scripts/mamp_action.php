@@ -6,20 +6,24 @@ $home = $workflow->home();
 
 $args = $argv[1];
 $args = explode(" ",$args);
-$args = $args[0];
+$flags = array("-v","-t","-f");
+if (!array_intersect($flags,$args)){
 
-$args = str_replace(" ","",$args);
+    $args = $args[0];
 
-$mamp_hosts_path = $home."/Library/Application Support/appsolute/MAMP PRO/httpd.conf";
-if (file_exists($mamp_hosts_path))
-{
-    $lines = file($mamp_hosts_path);
-    $lineNumber = getLineWithString($mamp_hosts_path,$args,$lines);
-    $lineLimit = $lineNumber - 4;
-    $serverLine = lineRange($lineNumber,$lineLimit,$lines);
-    $server = str_replace("ServerName ","",$serverLine);
-    $server = trim($server);
-    shell_exec("open http://$server");
+    $args = str_replace(" ","",$args);
+
+    $mamp_hosts_path = $home."/Library/Application Support/appsolute/MAMP PRO/httpd.conf";
+    if (file_exists($mamp_hosts_path))
+    {
+        $lines = file($mamp_hosts_path);
+        $lineNumber = getLineWithString($mamp_hosts_path,$args,$lines);
+        $lineLimit = $lineNumber - 4;
+        $serverLine = lineRange($lineNumber,$lineLimit,$lines);
+        $server = str_replace("ServerName ","",$serverLine);
+        $server = trim($server);
+        shell_exec("open http://$server");
+    }
 }
 
 function getLineWithString($fileName, $str, $lines) {
@@ -58,6 +62,7 @@ function lineRange($line,$lineLimit,$lines){
     }
 
 }
+
 
 
 ?>
