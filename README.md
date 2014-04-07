@@ -1,4 +1,4 @@
-Alfred-Project-Workflow [(Download 1.3.0)](http://bit.ly/1ehCkiR)
+Alfred-Project-Workflow [(Download 1.4.0)](http://bit.ly/1ehCkiR)
 =======================
 
 Workflow to quickly open projects using Alfred
