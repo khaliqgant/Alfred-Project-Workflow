@@ -6,6 +6,17 @@
 	<string>com.khaliqgant.openproject</string>
 	<key>connections</key>
 	<dict>
+		<key>753F8D26-3A5D-4C1E-8D2C-FF03DAAD55E2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0E006BA5-1442-47A0-A692-C270F81DD8F8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>A33EA67D-3602-4FD5-AB14-9E5C5A75E10D</key>
 		<array/>
 		<key>AB4ACA17-8C51-4725-918F-80C7438F9B96</key>
@@ -179,15 +190,67 @@ cd $project &amp;&amp; git status &amp;&amp; github .</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>ide</string>
+				<key>script</key>
+				<string>php -f scripts/search.php -- "{query}"</string>
+				<key>title</key>
+				<string>Open Project {query} in Vim</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>753F8D26-3A5D-4C1E-8D2C-FF03DAAD55E2</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>script</key>
+				<string>php -f scripts/action.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0E006BA5-1442-47A0-A692-C270F81DD8F8</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>0E006BA5-1442-47A0-A692-C270F81DD8F8</key>
+		<dict>
+			<key>ypos</key>
+			<real>520</real>
+		</dict>
 		<key>6A5D02A6-7323-45AD-BAE0-2462CA6C47C0</key>
 		<dict>
 			<key>ypos</key>
 			<real>120</real>
+		</dict>
+		<key>753F8D26-3A5D-4C1E-8D2C-FF03DAAD55E2</key>
+		<dict>
+			<key>ypos</key>
+			<real>520</real>
 		</dict>
 		<key>A33EA67D-3602-4FD5-AB14-9E5C5A75E10D</key>
 		<dict>
