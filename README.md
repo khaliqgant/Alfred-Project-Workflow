@@ -23,6 +23,8 @@ new one up. I also love [Alfred](http://www.alfredapp.com/) and so set out to ma
 * It will then launch that project in your IDE and cd to that project in the terminal, run a git status for you, and open the Github app for that repository. Note: Install "Command Lines Tools" on the Github app if you want this to work.
 * If you use MAMP it will also look up the domain of the project and open it in the browser
 
+* If you want to open a project only in your IDE of choice, initiate with ````ide```` which will bring up your projects and selecting one will then quickly open it in your IDE.
+* No arguments are accepted for this option
 
 Heavily influnced by [gharlan / alfred-github-workflow](https://github.com/gharlan/alfred-github-workflow)
 
