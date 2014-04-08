@@ -8,7 +8,7 @@ There are times when I'm working on 5-6 projects at a time and I want to be able
 new one up. I also love [Alfred](http://www.alfredapp.com/) and so set out to make this.
 
 ## Config Options
-* Set your IDE and working directory by writing ````pro set```` and the top options will drop down:
+* Set your IDE and working directory by writing ````proj set```` and the top options will drop down:
 ![Screenshot of config options](http://i.imgur.com/q5D42cY.png)
 * Right now the only two IDEs that I know that will work are Sublime & Macvim. If you are using Sublime you should have set a symlink so as seen [here](http://www.sublimetext.com/docs/2/osx_command_line.html) so the shortcut will be "subl"
 * The IDE should by typed in "Macvim" or "Sublime"
