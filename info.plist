@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.khaliqgant.openproject</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>753F8D26-3A5D-4C1E-8D2C-FF03DAAD55E2</key>
@@ -122,7 +124,7 @@
 				<key>script</key>
 				<string>string="{query}"
 project=${string%% *}
-cd $project &amp;&amp; git status &amp;&amp; github .</string>
+cd $project &amp;&amp; git status &amp;&amp; github . &amp;&amp; open .</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.terminalcommand</string>

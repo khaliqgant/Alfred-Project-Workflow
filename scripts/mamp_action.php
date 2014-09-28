@@ -22,7 +22,9 @@ if (!array_intersect($flags,$args)){
         $serverLine = lineRange($lineNumber,$lineLimit,$lines);
         $server = str_replace("ServerName ","",$serverLine);
         $server = trim($server);
-        shell_exec("open http://$server");
+        if ($server){
+            shell_exec("open http://$server");
+        }
     }
 }
 
