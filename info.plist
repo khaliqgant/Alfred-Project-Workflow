@@ -124,7 +124,7 @@
 				<key>script</key>
 				<string>string="{query}"
 project=${string%% *}
-cd $project &amp;&amp; git status &amp;&amp; github . &amp;&amp; open . &amp;&amp; [ $(find . -maxdepth 2 -name .bashrc-local) ] &amp;&amp; cd $(dirname $(find . -maxdepth 2 -name .bashrc-local)) &amp;&amp; source .bashrc-local</string>
+cd $project &amp;&amp; github . &amp;&amp; open . &amp;&amp; [ $(find . -maxdepth 2 -name .bashrc-local) ] &amp;&amp; cd $(dirname $(find . -maxdepth 2 -name .bashrc-local)) &amp;&amp; source .bashrc-local &amp;&amp; cd $project &amp;&amp; git status</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.terminalcommand</string>
