@@ -30,9 +30,10 @@ new one up. I also love [Alfred](http://www.alfredapp.com/) and so set out to ma
 * Sometimes in my projects I have a localized bash-rc file called ‘bashrc-local'
 * With this project loader I conditinoally check for a local bashrc-local file which can only be a maximum of 
 two directories deep and load it <br/>
-````    
+````
 [ $(find . -maxdepth 2 -name .bashrc-local) ] && cd $(dirname $(find . -maxdepth 2 -name .bashrc-local)) && source .bashrc-local
-```` <br/>
+````
+<br/>
 
 
 This project is heavily influnced by [gharlan / alfred-github-workflow](https://github.com/gharlan/alfred-github-workflow)
