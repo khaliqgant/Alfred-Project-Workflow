@@ -26,5 +26,14 @@ new one up. I also love [Alfred](http://www.alfredapp.com/) and so set out to ma
 * If you want to open a project only in your IDE of choice, initiate with ````ide```` which will bring up your projects and selecting one will then quickly open it in your IDE.
 * No arguments are accepted for this option
 
-Heavily influnced by [gharlan / alfred-github-workflow](https://github.com/gharlan/alfred-github-workflow)
+# Local Bash File
+* Sometimes in my projects I have a localized bash-rc file called ‘bashrc-local'
+* With this project loader I conditinoally check for a local bashrc-local file which can only be a maximum of 
+two directories deep and load it <br/>
+````    
+[ $(find . -maxdepth 2 -name .bashrc-local) ] && cd $(dirname $(find . -maxdepth 2 -name .bashrc-local)) && source .bashrc-local
+```` <br/>
+
+
+This project is heavily influnced by [gharlan / alfred-github-workflow](https://github.com/gharlan/alfred-github-workflow)
 
