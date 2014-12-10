@@ -35,6 +35,9 @@ two directories deep and load it <br/>
 ````
 <br/>
 
+# Roadmap
+* Add in the option to pass in an argument for another website to open. In my use case would be a JIRA ticket ID
+
 
 This project is heavily influnced by [gharlan / alfred-github-workflow](https://github.com/gharlan/alfred-github-workflow)
 
