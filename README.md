@@ -18,7 +18,6 @@ new one up. I also love [Alfred](http://www.alfredapp.com/) and so set out to ma
 * Initiate with ````proj````
 * Shows you which projects are located in the directory that you specified
 ![Screenshot of project prompt](http://imgur.com/tqqqrWI.png)
-* You can optionally set what part of the project you want to launch. For example ````proj assets```` will then launch in your IDE the assets folder for whichever project is selected. You could also use ````*```` or ````.````
 * Scroll down to select a project to launch
 * It will then launch that project in your IDE and cd to that project in the terminal, run a git status for you, and open the Github app for that repository. Note: Install "Command Lines Tools" on the Github app if you want this to work.
 * If you use MAMP it will also look up the domain of the project and open it in the browser
