@@ -8,7 +8,7 @@ $action = $argv[1];
 $options = explode(" ",$action);
 
 $admin = $options[0];
-$set = $options[1];
+$set = isset($options[1]) ? $options[1] : FALSE;
 $admin = arg_cleanup($admin,$set);
 
 //get their working directory
