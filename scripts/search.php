@@ -4,8 +4,8 @@ require_once('workflows.php');
 $workflow = new Workflows();
 $home = $workflow->home();
 
-$action = $argv[1];
-$options = explode(" ",$action);
+$search_term = $argv[1] ?: true;
+$options = explode(" ",$search_term);
 
 $admin = $options[0];
 $set = isset($options[1]) ? $options[1] : FALSE;
@@ -14,11 +14,14 @@ $admin = arg_cleanup($admin,$set);
 //get their working directory
 $dir = $workflow->get('Directory','settings/settings.plist');
 
-if ($action !== "set" && $admin !== "set")
+if ($search_term !== "set" && $admin !== "set")
 {
     if ($handle = opendir($home."/".$dir)) {
         while (false !== ($project= readdir($handle))) {
-            if ($project != "." && $project != ".." && $project !== ".DS_Store") {
+            if ($project != "." && $project != ".." && $project !== ".DS_Store"
+                && ($search_term === true ||
+                    strpos(strtoupper($project),strtoupper($search_term)) !== false)
+            ) {
                 $icon_possible_path = $home."/".$dir."/".$project."/favicon.ico";
                 //use the favicon if one there
                 if (file_exists($icon_possible_path))
@@ -28,7 +31,7 @@ if ($action !== "set" && $admin !== "set")
                     $icon = 'icon.png';
                 }
 
-                $path = $home."/".$dir."/".$project." ".$action;
+                $path = $home."/".$dir."/".$project;
                 $workflow->result($project,$path,$project,$project,$icon);
             }
         }
