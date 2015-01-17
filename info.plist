@@ -196,7 +196,7 @@ cd $project &amp;&amp; github . &amp;&amp; open . &amp;&amp; [ $(find . -maxdept
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>2</integer>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>36</integer>
 				<key>keyword</key>
@@ -208,7 +208,7 @@ cd $project &amp;&amp; github . &amp;&amp; open . &amp;&amp; [ $(find . -maxdept
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
