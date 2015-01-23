@@ -34,10 +34,11 @@ if ($search_term !== "set" && $admin !== "set")
                 $path = $home."/".$dir."/".$project;
                 if ($project === "go") {
                     //should set this in the config and not hard code it
-                    if ($handle = opendir($path."/src/github.com/vector")) {
+                        $go_path = "/src/github.com/vector/";
+                    if ($handle = opendir($path.$go_path)) {
                         while (false != ($go_project = readdir($handle))) {
                             if ($go_project != "." && $go_project != ".." && $go_project !== ".DS_Store") {
-                                $path .= $go_project;
+                                $path .= $go_path.$go_project;
                                 $workflow->result($go_project,$path,$go_project,$project,$icon);
                             }
                         }
