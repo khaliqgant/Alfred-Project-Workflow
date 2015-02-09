@@ -100,6 +100,14 @@
 				<integer>36</integer>
 				<key>keyword</key>
 				<string>proj</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
 				<key>script</key>
 				<string>php -f scripts/search.php -- "{query}"</string>
 				<key>title</key>
@@ -124,7 +132,7 @@
 				<key>script</key>
 				<string>string="{query}"
 project=${string%% *}
-cd $project &amp;&amp; github . &amp;&amp; open . &amp;&amp; [ $(find . -maxdepth 2 -name .bashrc-local) ] &amp;&amp; cd $(dirname $(find . -maxdepth 2 -name .bashrc-local)) &amp;&amp; source .bashrc-local ; cd $project &amp;&amp; git status</string>
+cd $project &amp;&amp; github . &amp;&amp; open . -g &amp;&amp; [ $(find . -maxdepth 2 -name .bashrc-local) ] &amp;&amp; cd $(dirname $(find . -maxdepth 2 -name .bashrc-local)) &amp;&amp; source .bashrc-local ; cd $project &amp;&amp; git status</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.terminalcommand</string>
@@ -159,6 +167,14 @@ cd $project &amp;&amp; github . &amp;&amp; open . &amp;&amp; [ $(find . -maxdept
 				<integer>36</integer>
 				<key>keyword</key>
 				<string>proj set</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
 				<key>script</key>
 				<string>php -f scripts/admin.php -- "{query}"</string>
 				<key>title</key>
@@ -201,6 +217,14 @@ cd $project &amp;&amp; github . &amp;&amp; open . &amp;&amp; [ $(find . -maxdept
 				<integer>36</integer>
 				<key>keyword</key>
 				<string>ide</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
 				<key>script</key>
 				<string>php -f scripts/search.php -- "{query}"</string>
 				<key>title</key>
