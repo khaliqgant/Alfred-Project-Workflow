@@ -46,6 +46,8 @@ if ($search_term !== "set" && $admin !== "set")
 
                 } else {
                     $workflow->result($project,$path,$project,$project,$icon);
+                    //open dropbox as well
+                    shell_exec("open -g '/Users/khaliq/Dropbox (Vector Media Group)/Vector/$project/'");
                 }
             }
         }
